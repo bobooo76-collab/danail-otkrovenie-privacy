@@ -1,10 +1,10 @@
 <!doctype html>
-<html lang="bg">
+<html lang="bg" data-lang="bg">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Политика за поверителност – Данаил и Откровение</title>
-<meta name="description" content="Политика за поверителност на приложението „Данаил и Откровение“. Приложението не събира лични данни.">
+<title>Политика за поверителност / Privacy Policy – Данаил и Откровение</title>
+<meta name="description" content="Политика за поверителност на приложението „Данаил и Откровение“. Приложението не събира лични данни. / Privacy policy of the app “Danail i Otkrovenie”. The app does not collect personal data.">
 <link rel="icon" href="icon.png">
 <style>
   :root {
@@ -31,6 +31,8 @@
   }
   * { box-sizing: border-box; }
   html { -webkit-text-size-adjust: 100%; }
+  html[data-lang="bg"] [data-l="en"] { display: none !important; }
+  html[data-lang="en"] [data-l="bg"] { display: none !important; }
   body {
     margin: 0;
     min-height: 100vh;
@@ -40,8 +42,30 @@
     font-size: 18px;
     line-height: 1.65;
   }
-  .wrap { max-width: 760px; margin: 0 auto; padding: 32px 20px 56px; }
-  header { text-align: center; padding: 8px 0 26px; }
+  .wrap { max-width: 760px; margin: 0 auto; padding: 20px 20px 56px; }
+  .langbar { display: flex; justify-content: flex-end; }
+  .lang {
+    display: inline-flex;
+    border: 1px solid var(--line);
+    border-radius: 999px;
+    overflow: hidden;
+    background: var(--card);
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  }
+  .lang button {
+    font: inherit;
+    font-size: 15px;
+    font-weight: 700;
+    letter-spacing: .5px;
+    padding: 7px 18px;
+    border: 0;
+    background: transparent;
+    color: var(--soft);
+    cursor: pointer;
+  }
+  .lang button[aria-pressed="true"] { background: var(--accent); color: #fff; }
+  .lang button:focus-visible { outline: 3px solid var(--accent); outline-offset: -3px; }
+  header { text-align: center; padding: 6px 0 26px; }
   header img { width: 96px; height: 96px; object-fit: contain; filter: drop-shadow(0 4px 8px rgba(0,0,0,.18)); }
   .kicker { margin: 14px 0 4px; font-size: 15px; letter-spacing: 2px; text-transform: uppercase; color: var(--soft); font-weight: 700; }
   h1 {
@@ -89,61 +113,157 @@
 </head>
 <body>
 <div class="wrap">
+  <div class="langbar">
+    <div class="lang" role="group" aria-label="Език / Language">
+      <button type="button" id="btn-bg" data-set="bg" aria-pressed="true">БГ</button>
+      <button type="button" id="btn-en" data-set="en" aria-pressed="false">EN</button>
+    </div>
+  </div>
+
   <header>
-    <img src="icon.png" alt="Иконата на приложението – свитък с Алфа и Омега">
-    <p class="kicker">Политика за поверителност</p>
-    <h1>Данаил и Откровение</h1>
+    <img src="icon.png" alt="Danail i Otkrovenie – scroll icon with Alpha and Omega">
+    <p class="kicker"><span data-l="bg" lang="bg">Политика за поверителност</span><span data-l="en" lang="en">Privacy Policy</span></p>
+    <h1><span data-l="bg" lang="bg">Данаил и Откровение</span><span data-l="en" lang="en">Daniel and Revelation</span></h1>
     <div class="rule"></div>
   </header>
 
   <div class="card">
     <div class="badge">
       <div class="tick">✓</div>
-      <div><b>Накратко:</b> приложението не събира, не изпраща и не споделя никакви лични данни. Всичко, което записваш в него, остава само на твоя телефон.</div>
+      <div>
+        <span data-l="bg" lang="bg"><b>Накратко:</b> приложението не събира, не изпраща и не споделя никакви лични данни. Всичко, което записваш в него, остава само на твоя телефон.</span>
+        <span data-l="en" lang="en"><b>In short:</b> the app does not collect, send or share any personal data. Everything you save in it stays on your phone only.</span>
+      </div>
     </div>
 
     <section>
-      <h2>Кой е създателят</h2>
-      <p>Приложението „Данаил и Откровение“ (пакет <code>com.bobo.danielotkrovenie</code>) е създадено от Боян Бонев.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Кой е създателят</h2>
+        <p>Приложението „Данаил и Откровение“ (пакет <code>com.bobo.danielotkrovenie</code>) е създадено от Боян Бонев.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>Who made the app</h2>
+        <p>The app “Daniel and Revelation” (Android package <code>com.bobo.danielotkrovenie</code>, Bulgarian title “Данаил и Откровение”) was created by Boyan Bonev.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Какво не събираме</h2>
-      <p>Приложението не събира лични данни и не ги съхранява на сървър. Не изисква интернет връзка, няма регистрация, реклами, следене или статистика на ползването. Не ползва услуги на трети страни за анализ.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Какво не събираме</h2>
+        <p>Приложението не събира лични данни и не ги съхранява на сървър. Не изисква интернет връзка, няма регистрация, реклами, следене или статистика на ползването. Не ползва услуги на трети страни за анализ.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>What we do not collect</h2>
+        <p>The app does not collect personal data and does not store it on any server. It does not need an internet connection and has no registration, advertising, tracking or usage analytics. It uses no third-party analytics services.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Какво се пази на твоето устройство</h2>
-      <p>Твоите бележки, отметки, последните търсения, мястото, докъдето си стигнал в четенето, и настройките (размер на шрифта, облик, цвят) се записват само на телефона ти. Те не напускат устройството и се изтриват, когато изтриеш приложението или неговите данни.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Какво се пази на твоето устройство</h2>
+        <p>Твоите бележки, отметки, последните търсения, мястото, докъдето си стигнал в четенето, и настройките (размер на шрифта, облик, цвят) се записват само на телефона ти. Те не напускат устройството и се изтриват, когато изтриеш приложението или неговите данни.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>What is kept on your device</h2>
+        <p>Your notes, bookmarks, recent searches, your reading position and your settings (font size, theme, accent colour) are saved on your phone only. They never leave the device and are deleted when you uninstall the app or clear its data.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Споделяне – само по твое желание</h2>
-      <p>Ако натиснеш „Сподели“ или „Изнеси бележки и отметки“, избраният текст се предава на приложението, което ти избереш (например имейл или съобщения). Приложението не го изпраща никъде само.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Споделяне – само по твое желание</h2>
+        <p>Ако натиснеш „Сподели“ или „Изнеси бележки и отметки“, избраният текст се предава на приложението, което ти избереш (например имейл или съобщения). Приложението не го изпраща никъде само.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>Sharing – only when you choose</h2>
+        <p>If you tap “Share” or “Export notes and bookmarks”, the selected text is handed to the app you choose (for example email or messages). The app never sends it anywhere by itself.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Четене на глас</h2>
-      <p>Функцията ползва вградения в телефона ти синтез на реч. Начинът, по който той обработва текста, зависи от настройките на самото устройство.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Четене на глас</h2>
+        <p>Функцията ползва вградения в телефона ти синтез на реч. Начинът, по който той обработва текста, зависи от настройките на самото устройство.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>Read aloud</h2>
+        <p>This feature uses the text-to-speech engine built into your phone. How that engine processes the text depends on the settings of the device itself.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Деца</h2>
-      <p>Приложението не е насочено специално към деца и не събира данни за никого, включително за деца.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Деца</h2>
+        <p>Приложението не е насочено специално към деца и не събира данни за никого, включително за деца.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>Children</h2>
+        <p>The app is not specifically directed at children and does not collect data from anyone, including children.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Промени в политиката</h2>
-      <p>Ако политиката се промени, новата версия ще бъде публикувана на тази страница с обновена дата.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Промени в политиката</h2>
+        <p>Ако политиката се промени, новата версия ще бъде публикувана на тази страница с обновена дата.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>Changes to this policy</h2>
+        <p>If this policy changes, the new version will be published on this page with an updated date.</p>
+      </div>
     </section>
 
     <section>
-      <h2>Връзка с нас</h2>
-      <p>Въпроси? Пиши на <a href="mailto:bonev.apps.sup@gmail.com">bonev.apps.sup@gmail.com</a>.</p>
+      <div data-l="bg" lang="bg">
+        <h2>Връзка с нас</h2>
+        <p>Въпроси? Пиши на <a href="mailto:bonev.apps.sup@gmail.com">bonev.apps.sup@gmail.com</a>.</p>
+      </div>
+      <div data-l="en" lang="en">
+        <h2>Contact</h2>
+        <p>Questions? Write to <a href="mailto:bonev.apps.sup@gmail.com">bonev.apps.sup@gmail.com</a>.</p>
+      </div>
     </section>
   </div>
 
-  <footer>Последна промяна: 5 октомври 2026 г.</footer>
+  <footer>
+    <span data-l="bg" lang="bg">Последна промяна: 5 октомври 2026 г.</span>
+    <span data-l="en" lang="en">Last updated: 5 October 2026</span>
+  </footer>
 </div>
+
+<script>
+(function () {
+  var root = document.documentElement;
+  var titles = {
+    bg: "Политика за поверителност – Данаил и Откровение",
+    en: "Privacy Policy – Daniel and Revelation"
+  };
+  function set(lang, save) {
+    if (lang !== "bg" && lang !== "en") lang = "bg";
+    root.setAttribute("data-lang", lang);
+    root.setAttribute("lang", lang);
+    document.title = titles[lang];
+    document.getElementById("btn-bg").setAttribute("aria-pressed", String(lang === "bg"));
+    document.getElementById("btn-en").setAttribute("aria-pressed", String(lang === "en"));
+    if (save) { try { localStorage.setItem("lang", lang); } catch (e) {} }
+  }
+  var initial = "bg";
+  var hash = (location.hash || "").replace("#", "");
+  var saved = null;
+  try { saved = localStorage.getItem("lang"); } catch (e) {}
+  if (hash === "en" || hash === "bg") {
+    initial = hash;
+  } else if (saved === "en" || saved === "bg") {
+    initial = saved;
+  } else if ((navigator.language || "").toLowerCase().indexOf("bg") !== 0) {
+    initial = "en";
+  }
+  set(initial, false);
+  var buttons = document.querySelectorAll(".lang button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].addEventListener("click", function () { set(this.getAttribute("data-set"), true); });
+  }
+})();
+</script>
 </body>
 </html>
